@@ -17,9 +17,9 @@ export default async function saySomething(something) {
       });
   
       const audioBlob = new Blob([response.data], { type: 'audio/mp3' });
-      const audioSrc = URL.createObjectURL(audioBlob);
+      // const audioSrc = URL.createObjectURL(audioBlob);
   
-      return audioSrc
+      return audioBlob
     } catch (error) {
       console.error('Error generating speech:', error.response ? error.response.data : error.message);
     }
