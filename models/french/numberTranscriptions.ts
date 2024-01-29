@@ -1,8 +1,8 @@
-interface FrenchNumberTranscriptions {
+interface FrenchNumberTranscriptionsProps {
   [key: number]: string;
 }
 
-export const frenchNumberTranscriptions: FrenchNumberTranscriptions = {
+export const frenchNumberTranscriptions: FrenchNumberTranscriptionsProps = {
   0: 'zéro',
   1: 'un',
   2: 'deux',
