@@ -102,5 +102,6 @@ export const frenchNumberTranscriptions: FrenchNumberTranscriptionsProps = {
   96: 'quatre-vingt-seize',
   97: 'quatre-vingt-dix-sept',
   98: 'quatre-vingt-dix-huit',
-  99: 'quatre-vingt-dix-neuf'
+  99: 'quatre-vingt-dix-neuf',
+  100: 'cent'
 };
