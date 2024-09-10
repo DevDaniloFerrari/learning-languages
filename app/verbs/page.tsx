@@ -1,42 +1,50 @@
+"use client";
 import { useState } from "react";
-import getConjugation from "../../services/open-api/getConjugation";
-import fs from "fs";
+import verbs from "@/verbs.json";
 
 export default function page() {
-  var verbs: any[] = [];
+  const [verb, setVerb] = useState<any>([]);
 
-  async function generate() {
-    const conjugation = await getConjugation(verbs);
-    verbs.push(conjugation)
-    return verbs
+  function getVerb() {
+    const index = Math.round(Math.random() * 100);
+    setVerb(verbs[index]);
   }
 
-  async function batch() {
-  var verbsAgain: any[] = [];
-    for (let index = 0; index < 100; index++) {
-      verbsAgain = await generate();
-    }
-
-    const data = {
-      itens: verbsAgain,
-    };
-    console.log(verbsAgain)
-
-    const jsonString = JSON.stringify(data, null, 2);
-
-    // Write the JSON string to a file
-    fs.writeFile("data.json", jsonString, (e: any) => {
-      if (e) {
-        console.error("Error writing file", e);
-      } else {
-        console.log("File has been saved");
-      }
-    });
-  }
-
-  // batch().then(() => {
-  //   console.log('iniciei')
-  // })
-
-  return <button>Gerenate</button>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <h1>Verb Conjugation</h1>
+      <h2>{verb.verb}</h2>
+      <div>
+        <label htmlFor="je">je: </label>
+        <input name="je" id="je" />
+      </div>
+      <div>
+        <label htmlFor="tu">tu: </label>
+        <input name="tu" id="tu" />
+      </div>
+      <div>
+        <label htmlFor="il_elle">il/elle: </label>
+        <input name="il_elle" id="il_elle" />
+      </div>
+      <div>
+        <label htmlFor="nous">nous: </label>
+        <input name="nous" id="nous" />
+      </div>
+      <div>
+        <label htmlFor="vous">vous: </label>
+        <input name="vous" id="vous" />
+      </div>
+      <div>
+        <label htmlFor="ils_elles">ils/elles: </label>
+        <input name="ils_elles" id="ils_elles" />
+      </div>
+      <button onClick={() => getVerb()}>New Verb</button>
+    </div>
+  );
 }
