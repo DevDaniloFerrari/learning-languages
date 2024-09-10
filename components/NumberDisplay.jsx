@@ -1,6 +1,7 @@
 import { frenchNumberTranscriptions } from "@/models/french/numberTranscriptions";
 import { saveAs } from "file-saver";
 import saySomething from "../services/open-api/textToSpeech";
+import { monthTranscriptions } from "@/models/french/monthTranscription";
 
 function blobToArrayBuffer(blob) {
   return new Promise((resolve, reject) => {
@@ -31,8 +32,10 @@ export default function NumberDisplay(props) {
     // const filePath = path.join(__dirname, 'audios', 'speech.mp3'); // Adjust the folder path and file name as needed
     // fs.writeFileSync(filePath, Buffer.from(arrayBuffer, 'binary'));
 
-    // const audio = await saySomething('dimanche')
-    // saveAs(audio, `7.mp3`);
+      // const audio = await saySomething('décembre')
+      // saveAs(audio, `12.mp3`);
+
+    
 
     const audioElement = new Audio(`audios/numbers/${props.value}.mp3`)
     audioElement.play()
