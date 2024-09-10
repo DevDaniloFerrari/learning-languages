@@ -363,17 +363,6 @@
     }
   },
   {
-    "verb": "arriver",
-    "present": {
-      "je": "j'arrive",
-      "tu": "tu arrives",
-      "il_elle": "il/elle arrive",
-      "nous": "nous arrivons",
-      "vous": "vous arrivez",
-      "ils_elles": "ils/elles arrivent"
-    }
-  },
-  {
     "verb": "malaxer",
     "present": {
       "je": "malaxe",
@@ -396,17 +385,6 @@
     }
   },
   {
-    "verb": "dessiner",
-    "present": {
-      "je": "dessine",
-      "tu": "dessines",
-      "il_elle": "dessine",
-      "nous": "dessinons",
-      "vous": "dessinez",
-      "ils_elles": "dessinent"
-    }
-  },
-  {
     "verb": "patiner",
     "present": {
       "je": "patine",
@@ -415,17 +393,6 @@
       "nous": "patinons",
       "vous": "patinez",
       "ils_elles": "patinent"
-    }
-  },
-  {
-    "verb": "vaincre",
-    "present": {
-      "je": "vaincs",
-      "tu": "vaincs",
-      "il_elle": "vainc",
-      "nous": "vainquons",
-      "vous": "vainquez",
-      "ils_elles": "vainquent"
     }
   },
   {
@@ -492,17 +459,6 @@
       "nous": "vivons",
       "vous": "vivez",
       "ils_elles": "vivent"
-    }
-  },
-  {
-    "verb": "crier",
-    "present": {
-      "je": "crie",
-      "tu": "cries",
-      "il_elle": "crie",
-      "nous": "crions",
-      "vous": "criez",
-      "ils_elles": "crient"
     }
   },
   {
@@ -734,17 +690,6 @@
       "nous": "dansons",
       "vous": "dansez",
       "ils_elles": "dansent"
-    }
-  },
-  {
-    "verb": "crier",
-    "present": {
-      "je": "crie",
-      "tu": "cries",
-      "il_elle": "crie",
-      "nous": "crions",
-      "vous": "criez",
-      "ils_elles": "crient"
     }
   },
   {
@@ -987,17 +932,6 @@
       "nous": "dansons",
       "vous": "dansez",
       "ils_elles": "dansent"
-    }
-  },
-  {
-    "verb": "dessiner",
-    "present": {
-      "je": "dessine",
-      "tu": "dessines",
-      "il_elle": "dessine",
-      "nous": "dessinons",
-      "vous": "dessinez",
-      "ils_elles": "dessinent"
     }
   },
   {

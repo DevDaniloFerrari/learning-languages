@@ -1,8 +1,17 @@
 "use client";
 import { useState } from "react";
 import verbs from "@/verbs.json";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 export default function page() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data: any) => console.log(data);
+
   const [verb, setVerb] = useState<any>([]);
 
   function getVerb() {
@@ -20,30 +29,37 @@ export default function page() {
     >
       <h1>Verb Conjugation</h1>
       <h2>{verb.verb}</h2>
-      <div>
-        <label htmlFor="je">je: </label>
-        <input name="je" id="je" />
-      </div>
-      <div>
-        <label htmlFor="tu">tu: </label>
-        <input name="tu" id="tu" />
-      </div>
-      <div>
-        <label htmlFor="il_elle">il/elle: </label>
-        <input name="il_elle" id="il_elle" />
-      </div>
-      <div>
-        <label htmlFor="nous">nous: </label>
-        <input name="nous" id="nous" />
-      </div>
-      <div>
-        <label htmlFor="vous">vous: </label>
-        <input name="vous" id="vous" />
-      </div>
-      <div>
-        <label htmlFor="ils_elles">ils/elles: </label>
-        <input name="ils_elles" id="ils_elles" />
-      </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <label htmlFor="je">je: </label>
+          <input id="je" {...register("je", { required: true })} />
+        </div>
+        <div>
+          <label htmlFor="tu">tu: </label>
+          <input id="tu" {...register("tu", { required: true })} />
+        </div>
+        <div>
+          <label htmlFor="il_elle">il/elle: </label>
+          <input id="il_elle" {...register("il_elle", { required: true })} />
+        </div>
+        <div>
+          <label htmlFor="nous">nous: </label>
+          <input id="nous" {...register("nous", { required: true })} />
+        </div>
+        <div>
+          <label htmlFor="vous">vous: </label>
+          <input id="vous" {...register("vous", { required: true })} />
+        </div>
+        <div>
+          <label htmlFor="ils_elles">ils/elles: </label>
+          <input
+            id="ils_elles"
+            {...register("ils_elles", { required: true })}
+          />
+        </div>
+        <input type="submit" />
+      </form>
+
       <button onClick={() => getVerb()}>New Verb</button>
     </div>
   );
